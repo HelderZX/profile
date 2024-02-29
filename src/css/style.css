@@ -65,6 +65,8 @@ body {
     );
   background-size: 66px 116px;
   background-position: 0 0, 0 0, 33px 58px, 33px 58px, 0 0, 33px 58px;
+  
+  background-attachment: fixed;
 }
 
 .container {
@@ -88,14 +90,14 @@ body {
 /* ---------------------------- */
 
 .nav {
-position: absolute;
-  padding: 10px 0;
+    position: relative;
+    padding: 1rem;
 }
 
 .navbar-items {
-  display: flex;
-  padding: 0;
-  gap: 1rem;
+    display: flex;
+    padding: 0;
+    gap: 1rem;
 }
 
 .navbar-items li {
@@ -149,6 +151,12 @@ position: absolute;
     font-size: 18px;
 }
 
+.personal-info .contacts {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
 .personal-info .contacts a{
     color: white;
     text-decoration: none;
@@ -180,12 +188,6 @@ position: absolute;
     aspect-ratio: 1;
     width: 200px;
     transform: translateX(20%);
-}
-
-.personal-info .contacts {
-  display: flex;
-  flex-direction: column;
-  padding: 1rem 0;
 }
 
 .personal-info .slide-down {
