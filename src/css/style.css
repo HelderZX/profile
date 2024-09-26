@@ -554,3 +554,10 @@ body {
     height: fit-content;
 }
 
+.tic-tac-toe-project .content {
+    flex-grow: 1;
+    display: flex;
+    height: 100%;
+    z-index: 2;
+    overflow: hidden;
+}
