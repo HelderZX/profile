@@ -70,8 +70,8 @@ body {
 }
 
 .container {
-  padding: 0 1rem;
-  position: relative;
+    position: relative;
+    padding: 0 1rem;
 }
 
 .main {
@@ -81,8 +81,36 @@ body {
 
   margin: auto;
   height: 100%;
-  max-width: 80%;
   padding: 0 2rem;
+}
+
+.btn-open{
+    border-radius: 2rem;
+    border: 1px solid white;
+    background-color: transparent;
+    color: white;
+    padding: 10px 20px;
+    transition: 0.2s;
+    font-size: 16px;
+    margin: 5px;
+}
+
+.btn-icon{
+    border-radius: 50%;
+    border: 1px solid white;
+    background-color: transparent;
+    color: white;
+    padding: 10px 10px;
+    transition: 0.2s;
+    font-size: 16px;
+    margin: 5px;
+}
+
+.btn-open:hover, .btn-icon:hover{
+    cursor: pointer;
+    background-color: var(--orange);
+    color: var(--black);
+    border: 1px solid var(--black);
 }
 
 /* ---------- NavBar ---------- */
@@ -138,6 +166,7 @@ body {
 
 .personal-info .main{
     flex-direction: column-reverse;
+    max-width: 80%;
 }
 
 .personal-info h1 {
@@ -309,7 +338,73 @@ body {
   width: 100%;
 }
 
-/* ---------- Project ---------- */
+/* ---------- Cards ---------- */
+
+/* ----------------------------- */
+.container.projects{
+    background-color: var(--black);
+    color: white;
+    text-align: center;
+}
+
+.container.projects h1{
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.cards{
+    padding: 1rem;
+    display: flex;
+    gap: 2rem;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    overflow-x: auto;
+}
+
+.card-img{
+    background-color: var(--black);
+    border: 1px solid white;
+    width: 250px;
+    height: 200px;
+    border-radius: 1rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 2rem;
+    transition: .1s;
+}
+
+.card.selected .card-img{
+    background-color: wheat;
+}
+
+.card-img img{
+    width: 100%;
+    transition: .1s;
+}
+
+.card-img:hover{
+    background-color: black;
+}
+
+.card.selected:hover .card-img{
+    background-color: var(--orange);
+}
+
+.card-img:hover img{
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.card-name{
+    text-align: center;
+    font-size: 18px;
+    color: white;
+    margin-top: 20px;
+}
+
+/* ---------- Projects ---------- */
 
 /* ----------------------------- */
 
@@ -324,4 +419,138 @@ body {
     width: 100%;
     position: absolute;
     bottom: 0;
+    z-index: 1;
 }
+
+/* ---------- Flappy Duck ---------- */
+
+/* --------------------------------- */
+
+.flappy-project .main{
+    max-width: 100%;
+}
+
+.flappy-project .content{
+    flex-grow: 1;
+    display: flex;
+    height: 100%;
+    z-index: 2;
+    overflow: hidden;
+}
+
+.flappy-project .image-side{
+    display: flex;
+    gap: 3rem;
+}
+
+.flappy-project .image-side .logo{
+    width: calc(780px / 2.5);
+    height: calc(384px / 2.5);
+    align-self: center;
+    margin-top: 40px;
+}
+
+.flappy-project .image-side .smartphone{
+    width: calc(523px / 2);
+    height: calc(1074px / 2);
+    align-self: center;
+    transition: 0.3s;
+    border-radius: 3rem;
+}
+
+.flappy-project .image-side .smartphone:hover{
+    cursor: pointer;
+    transform: scale(1.05);
+    outline: 1px solid white;
+    outline-offset: 5px;
+}
+
+.flappy-project .image-side .bar{
+    width: calc(144px * 1);
+    height: calc(735px * 1);
+    align-self: flex-end;
+}
+
+.flappy-project .image-side .bar:nth-child(1){
+    transform: translateY(50%);
+}
+
+.flappy-project .image-side .bar:nth-child(3){
+    transform: translateY(30%);
+}
+
+.flappy-project .description-side{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    flex-grow: 1;
+}
+
+.flappy-project .description-side .title{ 
+    font-size: 28px;
+    height: 50%;
+    display: flex;
+    align-items: flex-end;
+}
+
+.flappy-project .description-side .description{ 
+    font-size: 18px;
+    color: white;
+    width: 70%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+    gap: 1rem;
+}
+
+.flappy-project .description-side .description .p{ 
+    height: fit-content;
+}
+
+.flappy-project .description-side .description .btn-open{ 
+    height: fit-content;
+}
+
+/* ---------- Flappy Duck ---------- */
+
+/* --------------------------------- */
+.tic-tac-toe-project .description-side{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    flex-grow: 1;
+}
+
+.tic-tac-toe-project .description-side .title{ 
+    font-size: 28px;
+    height: 50%;
+    display: flex;
+    align-items: flex-end;
+}
+
+.tic-tac-toe-project .description-side .description{ 
+    font-size: 18px;
+    color: white;
+    width: 70%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+    gap: 1rem;
+}
+
+.tic-tac-toe-project .description-side .description .p{ 
+    height: fit-content;
+}
+
+.tic-tac-toe-project .description-side .description .btn-open{ 
+    height: fit-content;
+}
+
