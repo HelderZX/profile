@@ -352,13 +352,17 @@ body {
     margin-bottom: 40px;
 }
 
+.container .content{
+    width: 100%;
+}
+
 .cards{
     padding: 1rem;
     display: flex;
     gap: 2rem;
     margin-top: 40px;
     margin-bottom: 40px;
-    overflow-x: auto;
+    overflow: auto;
 }
 
 .card-img{
@@ -515,7 +519,25 @@ body {
     height: fit-content;
 }
 
-/* ---------- Flappy Duck ---------- */
+@media only screen and (max-width: 768px) {
+    .smartphone, .bar-2{
+        display: none;
+    }
+    .flappy-project .image-side .bar-1{
+        width: calc(144px * 0.7);
+        height: calc(735px * 0.7);
+    }
+
+    .flappy-project .description-side .title h1{ 
+       font-size: 30px;
+    }
+
+    .flappy-project .description-side .description{ 
+       font-size: 16px;
+    }
+}
+
+/* ---------- Tic-Tac-Toe ---------- */
 
 /* --------------------------------- */
 .tic-tac-toe-project .description-side{
@@ -560,4 +582,14 @@ body {
     height: 100%;
     z-index: 2;
     overflow: hidden;
+}
+
+@media only screen and (max-width: 768px) {
+    .tic-tac-toe-project .description-side .title h1{ 
+       font-size: 30px;
+    }
+
+    .tic-tac-toe-project .description-side .description{ 
+       font-size: 16px;
+    }
 }
