@@ -125,7 +125,7 @@ body {
 .navbar-items {
     display: flex;
     padding: 0;
-    gap: 1rem;
+    gap: 2rem;
 }
 
 .navbar-items li {
@@ -592,4 +592,97 @@ body {
     .tic-tac-toe-project .description-side .description{ 
        font-size: 16px;
     }
+}
+
+/* ---------- Timer ---------- */
+
+/* --------------------------------- */
+.timer-project .description-side{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    flex-grow: 1;
+}
+
+.timer-project .description-side .title{ 
+    font-size: 28px;
+    height: 50%;
+    display: flex;
+    align-items: flex-end;
+}
+
+.timer-project .description-side .description{ 
+    font-size: 18px;
+    color: white;
+    width: 70%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+    gap: 1rem;
+}
+
+.timer-project .description-side .description .p{ 
+    height: fit-content;
+}
+
+.timer-project .description-side .description .btn-open{ 
+    height: fit-content;
+}
+
+.timer-project .content {
+    flex-grow: 1;
+    display: flex;
+    height: 100%;
+    z-index: 2;
+    overflow: hidden;
+}
+
+@media only screen and (max-width: 768px) {
+    .timer-project .description-side .title h1{ 
+       font-size: 30px;
+    }
+
+    .timer-project .description-side .description{ 
+       font-size: 16px;
+    }
+}
+
+.technologies{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1e1e1e;
+    padding: 1rem;
+    color: #ffffff;
+    overflow-x: auto;
+    border: 1px solid white;
+    border-radius: 1rem;
+}
+
+.technologies .logo{
+    filter: saturate(0);
+    width: 50px;
+    height: auto;
+    margin-inline: 5rem;
+    transition: 0.1s;
+}
+.technologies .logo:hover{
+    cursor: pointer;
+    filter: saturate(1);
+    scale: 1.1;
+}
+
+.footer{
+    background-color: #1e1e1e;
+    color: azure;
+    padding: 1rem 3rem;
+}
+
+.footer .content{
+    border-top: 1px solid white;
+    padding: 2rem 1rem;
 }
