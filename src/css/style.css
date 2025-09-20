@@ -46,7 +46,21 @@ p {
     gap: 1rem;
 }
 
-.projects .circle-icon {
+.title h1 {
+    font-size: 28px;
+    height: 50%;
+    display: flex;
+    align-items: flex-end;
+}
+
+@media only screen and (max-width: 768px) {
+    .title h1 {
+        font-size: 24px;
+    }
+}
+
+.projects .circle-icon,
+.contact-me .circle-icon {
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -288,16 +302,6 @@ p {
     background-color: var(--white);
 }
 
-@media (max-width: 768px) {
-    .card-img {
-        border: 0;
-    }
-
-    .card-img:hover {
-        border: 1px solid var(--grey);
-    }
-}
-
 /* ---------- Projects ---------- */
 
 /* ----------------------------- */
@@ -322,7 +326,6 @@ p {
 
 .technologies {
     display: flex;
-    justify-content: center;
     align-items: center;
     background-color: #1e1e1e;
     border-radius: 1rem;
@@ -354,6 +357,17 @@ p {
     justify-content: center;
     width: 50%;
     padding: 2rem 0;
+}
+
+@media (max-width: 768px) {
+    .technologies {
+        gap: 5px;
+    }
+
+    .technologies .logo {
+        width: 40px;
+        margin-inline: 2rem;
+    }
 }
 
 .works {
@@ -474,6 +488,10 @@ p {
 }
 
 @media (max-width: 768px) {
+    .works {
+        gap: 0;
+    }
+
     .work {
         flex-direction: column;
         align-items: center;
@@ -492,6 +510,7 @@ p {
     .work .description {
         align-items: center;
         padding: 0;
+        text-align: center;
     }
 }
 /* ---------- Form ---------- */

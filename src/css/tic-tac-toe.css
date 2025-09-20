@@ -10,13 +10,6 @@
     flex-grow: 1;
 }
 
-.tic-tac-toe-project .description-side .title {
-    font-size: 28px;
-    height: 50%;
-    display: flex;
-    align-items: flex-end;
-}
-
 .tic-tac-toe-project .description-side .description {
     font-size: 18px;
     color: white;

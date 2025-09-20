@@ -23,13 +23,6 @@
     flex-grow: 1;
 }
 
-.map-mind-project .description-side .title {
-    font-size: 28px;
-    height: 50%;
-    display: flex;
-    align-items: flex-end;
-}
-
 .map-mind-project .description-side .description {
     font-size: 18px;
     color: white;

@@ -67,13 +67,6 @@
     flex-grow: 1;
 }
 
-.flappy-project .description-side .title {
-    font-size: 28px;
-    height: 50%;
-    display: flex;
-    align-items: flex-end;
-}
-
 .flappy-project .description-side .description {
     font-size: 18px;
     color: white;
@@ -103,10 +96,6 @@
     .flappy-project .image-side .bar-1 {
         width: calc(144px * 0.7);
         height: calc(735px * 0.7);
-    }
-
-    .flappy-project .description-side .title h1 {
-        font-size: 30px;
     }
 
     .flappy-project .description-side .description {

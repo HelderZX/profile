@@ -47,6 +47,7 @@
     margin-bottom: 10px;
     padding: 0 1rem;
     height: 30px;
+    font-size: 24px;
 
     background-color: var(--orange);
     color: var(--white);
@@ -60,10 +61,6 @@
 .personal-info .habilities:hover {
     outline: 1px solid var(--black);
     outline-offset: 4px;
-}
-
-.personal-info .habilities {
-    font-size: 24px;
 }
 
 .personal-info .info p {
@@ -187,6 +184,7 @@
     }
 
     .personal-info .habilities {
+        height: 25px;
         font-size: 20px;
     }
 

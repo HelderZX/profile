@@ -10,13 +10,6 @@
     flex-grow: 1;
 }
 
-.timer-project .description-side .title {
-    font-size: 28px;
-    height: 50%;
-    display: flex;
-    align-items: flex-end;
-}
-
 .timer-project .description-side .description {
     font-size: 18px;
     color: white;
