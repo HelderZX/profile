@@ -5,50 +5,138 @@ $(document).on("click", ".card", (event) => {
     let target = $(event.currentTarget).attr("target")
     
     $('.card').removeClass("selected");
-    $('.project').slideUp();
+    $('.project').hide();
 
     $card.addClass("selected");
 
     $(target).parent().slideDown("fast", () => {
-        $('html, body').animate({
-            scrollTop: $(target).offset().top
+        $('html').animate({
+            //scrollTop: $(target).offset().top
         });
     });
 });
 
+$(document).on("click", ".image-side .btn-previous", (event) => {
+    let $screens = $(event.currentTarget).parent().find(".screen");
+    let $activeScreen = $(event.currentTarget).parent().find(".screen.active");
+    let currentIndex = $screens.index($activeScreen);
+    let previousIndex = (currentIndex - 1 + $screens.length) % $screens.length;
+
+    $activeScreen.removeClass("active").fadeOut(100, () => {
+        $screens.eq(previousIndex).css({opacity: 0, display: "block"}).addClass("active").animate({opacity: 1}, 100);
+    });
+});
+
+$(document).on("click", ".image-side .btn-next", (event) => {
+    let $screens = $(event.currentTarget).parent().find(".screen");
+    let $activeScreen = $(event.currentTarget).parent().find(".screen.active");
+    let currentIndex = $screens.index($activeScreen);
+    let nextIndex = (currentIndex + 1) % $screens.length;
+
+    $activeScreen.removeClass("active").fadeOut(100, () => {
+        $screens.eq(nextIndex).css({opacity: 0, display: "block"}).addClass("active").animate({opacity: 1}, 100);
+    });
+});
+
 function slideHabilities() {
-    let habilities = $(".habilities span");
+    let $habilities = $(".habilities span");
     let currentIndex = 0;
 
-    function showHability(index) {
-        habilities.fadeOut(300, function() {
-            habilities.hide();
-            $(habilities[index]).fadeIn(300);
+    $habilities.hide();
+    $habilities.eq(currentIndex).show();
+    $habilities.eq(currentIndex).text($habilities.eq(currentIndex).attr("data-text"));
+
+    function showNextHability() {
+        $habilities.eq(currentIndex).fadeOut(() => {
+            currentIndex = (currentIndex + 1) % $habilities.length;
+            $habilities.eq(currentIndex).text("");
+
+            $habilities.eq(currentIndex).fadeIn(() => {
+                let text = $habilities.eq(currentIndex).attr("data-text");
+                let i = 0;
+
+                function type() {
+                    if (i < text.length) {
+                        $habilities.eq(currentIndex).append(text.charAt(i));
+                        i++;
+                        setTimeout(type, 100);
+                    }
+                }
+
+                type();
+            });
         });
     }
 
-    // Hide all except the first
-    habilities.hide();
-    $(habilities[0]).show();
-
-    setInterval(() => {
-        currentIndex = (currentIndex + 1) % habilities.length;
-        showHability(currentIndex);
-    }, 3000);
+    setInterval(showNextHability, 3000);
 }
 
 slideHabilities();
 
 $(window).on("scroll", () => {
-    if ($(window).scrollTop() > $(window).height() - 1) {
+    if ($(window).scrollTop() > $(window).height() - 300) {
         $(".nav").addClass("dark");
+        $(".nav li a").addClass("text-dark-hover-animation");
+        $(".nav li button").addClass("button-dark-hover-animation");
     } else {
         $(".nav").removeClass("dark");
+        $(".nav li a").removeClass("text-dark-hover-animation");
+        $(".nav li button").removeClass("button-dark-hover-animation");
     }
 
     if ($(window).scrollTop() > 50) {
         $(".slide-down").fadeOut();
     } else {
-        $(".slide-down").fadeIn();
+        if (window.innerWidth > 768) {
+            $(".slide-down").fadeIn();
+        }
     }
 });
+
+$(document).on("click", ".navbar-items .logo", (event) => {
+    $(".navbar-items .logo").toggleClass("active");
+});
+
+$(document).on("click", (event) => {
+    if (!$(event.target).closest(".navbar-items").length) {
+        $(".navbar-items .logo").removeClass("active");
+    }
+});
+
+// Auto-scroll for .technologies and .cards containers
+function setupAutoScroll(containerSelector) {
+    const container = document.querySelector(containerSelector);
+    if (!container) return;
+
+    let scrollAmount = 1;
+    let autoScrollActive = window.innerWidth <= 1024;
+    let direction = 1; // 1 for right, -1 for left
+
+    function autoScroll() {
+        if (autoScrollActive) {
+            container.scrollLeft += scrollAmount * direction;
+            // Change direction at ends
+            if (container.scrollLeft + container.clientWidth >= container.scrollWidth) {
+                direction = -1;
+            } else if (container.scrollLeft <= 0) {
+                direction = 1;
+            }
+        }
+        requestAnimationFrame(autoScroll);
+    }
+
+    container.addEventListener('mouseenter', () => {
+        autoScrollActive = false;
+    });
+
+    container.addEventListener('mouseleave', () => {
+        if (window.innerWidth > 1024) return;
+        autoScrollActive = true;
+    });
+
+    autoScroll();
+}
+
+setupAutoScroll('.technologies');
+setupAutoScroll('.cards');
+

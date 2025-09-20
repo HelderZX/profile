@@ -1,0 +1,58 @@
+
+/* ---------- Timer ---------- */
+
+/* --------------------------------- */
+.timer-project .description-side {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+.timer-project .description-side .title {
+    font-size: 28px;
+    height: 50%;
+    display: flex;
+    align-items: flex-end;
+}
+
+.timer-project .description-side .description {
+    font-size: 18px;
+    color: white;
+    width: 70%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+    padding: 2rem 0;
+    box-sizing: border-box;
+    gap: 1rem;
+}
+
+.timer-project .description-side .description .p {
+    height: fit-content;
+}
+
+.timer-project .description-side .description .btn-open {
+    height: fit-content;
+}
+
+.timer-project .content {
+    flex-grow: 1;
+    display: flex;
+    height: 100%;
+    z-index: 2;
+    overflow: hidden;
+}
+
+@media only screen and (max-width: 768px) {
+    .timer-project .description-side .title h1 {
+        font-size: 30px;
+    }
+
+    .timer-project .description-side .description {
+        font-size: 16px;
+    }
+}

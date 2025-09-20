@@ -1,0 +1,115 @@
+/* ---------- Flappy Duck ---------- */
+
+/* --------------------------------- */
+
+.flappy-project .main {
+    max-width: 100%;
+}
+
+.flappy-project .content {
+    flex-grow: 1;
+    display: flex;
+    height: 100%;
+    z-index: 2;
+    overflow: hidden;
+}
+
+.flappy-project .image-side {
+    display: flex;
+    gap: 3rem;
+    border-bottom: 4px solid #161616;
+    border-radius: 1rem;
+}
+
+.flappy-project .image-side .logo {
+    width: calc(780px / 2.5);
+    height: calc(384px / 2.5);
+    align-self: center;
+    margin-top: 40px;
+}
+
+.flappy-project .image-side .smartphone {
+    width: calc(523px / 2);
+    height: calc(1074px / 2);
+    align-self: center;
+    transition: 0.3s;
+    border-radius: 3rem;
+}
+
+.flappy-project .image-side .smartphone:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    outline: 1px solid var(--black);
+    outline-offset: 5px;
+}
+
+.flappy-project .image-side .bar {
+    width: calc(144px * 1);
+    height: calc(735px * 1);
+    align-self: flex-end;
+    z-index: -1;
+}
+
+.flappy-project .image-side .bar:nth-child(1) {
+    transform: translateY(50%);
+}
+
+.flappy-project .image-side .bar:nth-child(3) {
+    transform: translateY(30%);
+}
+
+.flappy-project .description-side {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    flex-grow: 1;
+}
+
+.flappy-project .description-side .title {
+    font-size: 28px;
+    height: 50%;
+    display: flex;
+    align-items: flex-end;
+}
+
+.flappy-project .description-side .description {
+    font-size: 18px;
+    color: white;
+    width: 70%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+    gap: 1rem;
+}
+
+.flappy-project .description-side .description .p {
+    height: fit-content;
+}
+
+.flappy-project .description-side .description .btn-open {
+    height: fit-content;
+}
+
+@media only screen and (max-width: 768px) {
+    .smartphone,
+    .bar-2 {
+        display: none;
+    }
+
+    .flappy-project .image-side .bar-1 {
+        width: calc(144px * 0.7);
+        height: calc(735px * 0.7);
+    }
+
+    .flappy-project .description-side .title h1 {
+        font-size: 30px;
+    }
+
+    .flappy-project .description-side .description {
+        font-size: 16px;
+    }
+}

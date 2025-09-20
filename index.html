@@ -8,6 +8,13 @@
 
     <!-- Main CSS -->
     <link rel="stylesheet" href="src/css/style.css" />
+    <link rel="stylesheet" href="src/css/nav.css" />
+    <link rel="stylesheet" href="src/css/hero.css" />
+    <link rel="stylesheet" href="src/css/map-mind.css" />
+    <link rel="stylesheet" href="src/css/flappy-duck.css" />
+    <link rel="stylesheet" href="src/css/tic-tac-toe.css" />
+    <link rel="stylesheet" href="src/css/timer.css" />
+    <link rel="stylesheet" href="src/css/footer.css" />
 
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/26acf264ae.js" crossorigin="anonymous"></script>
@@ -36,22 +43,37 @@
             <li><a href="#experiences" class="text-hover-animation">Experiências</a></li>
             <li><a href="#projects" class="text-hover-animation">Projetos</a></li>
             <li><a href="#technologies" class="text-hover-animation">Tecnologias</a></li>
+            <li>
+                <button type="button" href="src/files/curriculum-vitae.pdf" target="_blank" class="button-hover-animation">
+                    <i class="fa-regular fa-circle-down"></i>
+                    <span class="label">Currículo</span>
+                </button>
+            </li>
         </ul>
     </nav>
     <div class="container personal-info" id="profile">
-        <div class="left-line"></div>
         <div class="main animate__animated animate__fadeInUp">
             <div class="info">
-                <h1>Olá, sou o Helder</h1>
+                <h1> <span class="text-orange">Olá,</span> sou o Helder</h1>
                 <h5 class="habilities">
-                    <span>Front-end</span>
-                    <span>Back-end</span>
-                    <span>Games</span>
+                    <span data-text="Front-end"></span>
+                    <span data-text="Back-end"></span>
+                    <span data-text="Games"></span>
                 </h5>
                 <p>
                     Um programador a desbravar o mundo do front e do back-end para criar experiências
                     digitais cativantes.
                 </p>
+                <div class="contacts-mobile animate__animated animate__fadeInUp">
+                    <a href="https://www.instagram.com/helder_andrade12/" target="_blank">
+                        <i class="fa-brands fa-instagram"></i>
+                        <span class="text-hover-animation">@helder_andrade12</span>
+                    </a>
+                    <a href="https://github.com/HelderZX" target="_blank">
+                        <i class="fa-brands fa-github"></i>
+                        <span class="text-hover-animation">HelderZX</span>
+                    </a>
+                </div>
             </div>
             <div class="image-container">
                 <img class="picture" src="src/images/profile.png" alt="profile" />
@@ -61,88 +83,33 @@
         <div class="contacts animate__animated animate__fadeInUp">
             <a href="https://www.instagram.com/helder_andrade12/" target="_blank">
                 <i class="fa-brands fa-instagram"></i>
-                <span class="text-hover-animation">@helder_andrade12</span>
+                <span class="text-dark-hover-animation">@helder_andrade12</span>
             </a>
             <a href="https://github.com/HelderZX" target="_blank">
                 <i class="fa-brands fa-github"></i>
-                <span class="text-hover-animation">HelderZX</span>
+                <span class="text-dark-hover-animation">HelderZX</span>
             </a>
         </div>
         <a href="#experiences" class="slide-down">
             <i class="fa-solid fa-arrow-down"></i>
         </a>
-    </div>
-    <div class="container projects">
-        <div class="main" id="experiences">
-            <div class="content">
-                <h1 class="title">EXPERIÊNCIA</h1>
-                <div class="works">
-                    <div class="image">
-                        <img src="src/images/person.png" style="filter: invert(1)"
-                            alt="profile" />
-                    </div>
-                    <div class="timeline">
-                        <div class="work">
-                            <div class="period">
-                                <p>2019 - 2022</p>
-                            </div>
-                            <span class="line">
-                                <span class="point"></span>
-                            </span>
-                            <div class="description">
-                                <h4>Secundário</h4>
-                                <b>Gestão e Programação de Sistemas Informáticos</b>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
-                            </div>
-                        </div>
-                        <div class="work">
-                            <div class="period">
-                                <p>2022 - 2023</p>
-                            </div>
-                            <span class="line">
-                                <span class="point"></span>
-                            </span>
-                            <div class="description">
-                                <h4>Polissistemas</h4>
-                                <b>Técnico de Equipamentos de Escritório</b>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
-                            </div>
-                        </div>
-                        <div class="work">
-                            <div class="period">
-                                <p>2023 -
-                                    <script>document.write(new Date().getFullYear())</script>
-                                </p>
-                            </div>
-                            <span class="line">
-                                <span class="point"></span>
-                            </span>
-                            <div class="description">
-                                <h4>Controlink</h4>
-                                <b>Programador</b>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <div id="experiences" class="wave" alt="wave"></div>
     </div>
     <div class="container projects">
         <div class="main" id="habilities">
             <div class="content">
-                <h1 class="title">TECNOLOGIAS</h1>
+                <span class="title">
+                    <span class="circle-icon">
+                        <i class="fa-solid fa-laptop-code"></i>
+                    </span>
+                    <h1>TECNOLOGIAS</h1>
+                </span>
                 <div class="technologies">
                     <img class="logo" src="src/images/logos/css.svg" alt="profile" />
-                    <span>|</span>
                     <img class="logo" src="src/images/logos/javascript.svg" alt="profile" />
-                    <span>|</span>
                     <img class="logo" src="src/images/logos/laravel.svg" alt="profile" />
-                    <span>|</span>
                     <img class="logo" src="src/images/logos/php.svg" alt="profile" />
-                    <span>|</span>
                     <img class="logo" src="src/images/logos/vuejs.svg" alt="profile" />
-                    <span>|</span>
                     <img class="logo" src="src/images/logos/bootstrap.svg" alt="profile" />
                 </div>
             </div>
@@ -151,32 +118,70 @@
     <div class="container projects">
         <div class="main" id="projects">
             <div class="content">
-                <h1 class="title">PROJETOS</h1>
+                <span class="title">
+                    <span class="circle-icon">
+                        <i class="fa-solid fa-code"></i>
+                    </span>
+                    <h1>PROJETOS</h1>
+                </span>
                 <div class="cards">
+                    <div class="card" target="#map-mind">
+                        <div class="card-img">
+                            <img src="src/images/map-mind/logo.svg" alt="map-mind-logo">
+                        </div>
+                    </div>
                     <div class="card" target="#flappy">
                         <div class="card-img">
                             <img src="src/images/flappy/logo.png" alt="flappy-logo">
-                        </div>
-                        <div class="card-name">
-                            Flappy Duck
                         </div>
                     </div>
                     <div class="card" target="#tic-tac-toe">
                         <div class="card-img">
                             <img src="src/images/tic-tac-toe/logo.png" alt="tic-tac-toe-logo">
                         </div>
-                        <div class="card-name">
-                            Tic-Tac-Toe
-                        </div>
                     </div>
                     <div class="card" target="#timer">
                         <div class="card-img">
-                            <img src="src/images/timer/logo.png" alt="timer-logo">
-                        </div>
-                        <div class="card-name">
-                            Timer
+                            <img src="src/images/timer/logo.svg" alt="timer-logo">
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container map-mind-project project" style="display: none;">
+        <div class="main" id="map-mind">
+            <div class="bottom-half"></div>
+            <div class="content">
+                <div class="description-side">
+                    <div class="title">
+                        <h1>MAP MIND</h1>
+                    </div>
+                    <div class="description">
+                        <div>
+                            <p class="mb-0">
+                                Explora o mapa e aprende curiosidades sobre cada país, desde localização até informações culturais e geográficas. Pesquisa livremente e expande os teus conhecimentos no Modo Exploração.
+                            </p>
+                            <p class="mb-0">
+                                Quando estiveres pronto para testar a tua memória e reflexos, entra no Modo Desafio: clica rapidamente nos países pedidos antes que o tempo acabe e prova os teus conhecimentos de geografia.
+                            </p>
+                            <p class="mb-0">
+                                Um jogo educativo, dinâmico e envolvente — perfeito para aprender e divertir-te ao mesmo tempo!
+                            </p>
+                        </div>
+                        <div>
+                            <a href="https://github.com/HelderZX/map-mind" target="_blank">
+                                <button type="button" class="btn-icon"><i class="fa-brands fa-github"></i></button>
+                            </a>
+                            <a href="https://map-mind-77c77.web.app/" target="_blank">
+                                <button type="button" class="btn-open">Ver Projeto <i
+                                        class="fa-solid fa-arrow-right"></i></button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-side">
+                    <img src="src/images/map-mind/logo.svg" class="logo" alt="map-mind-logo">
                 </div>
             </div>
         </div>
@@ -225,9 +230,9 @@
                         <h1>TIC-TAC-TOE</h1>
                     </div>
                     <div class="description">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt quibusdam dolore deleniti
-                            voluptatum doloremque incidunt. Excepturi atque voluptates odit sint temporibus dignissimos
-                            adipisci distinctio incidunt, alias, fugit eveniet corrupti minus?</p>
+                        <p>
+                            Um jogo clássico de tabuleiro desenvolvido para o navegador. Permite que dois jogadores disputem entre si num tabuleiro 3x3, com lógica para detetar automaticamente vitórias, empates e reiniciar a partida. O foco esteve em criar uma interface simples e intuitiva, aliando boa experiência de utilização à implementação da lógica do jogo.
+                        </p>
                         <div>
                             <a href="https://github.com/HelderZX/tic-tac-toe" target="_blank">
                                 <button type="button" class="btn-icon"><i class="fa-brands fa-github"></i></button>
@@ -240,6 +245,10 @@
                     </div>
                 </div>
                 <div class="image-side">
+                    <button class="btn-previous"><i class="fa-solid fa-arrow-left"></i></button>
+                    <img src="src/images/tic-tac-toe/screen1.png" class="screen" data-theme="light" alt="tic-tac-toe-logo">
+                    <img src="src/images/tic-tac-toe/screen2.png" class="screen active" data-theme="dark" alt="tic-tac-toe-logo">
+                    <button class="btn-next"><i class="fa-solid fa-arrow-right"></i></button>
                 </div>
             </div>
             <!-- 
@@ -258,21 +267,26 @@
                         <h1>Timer</h1>
                     </div>
                     <div class="description">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt quibusdam dolore deleniti
-                            voluptatum doloremque incidunt. Excepturi atque voluptates odit sint temporibus dignissimos
-                            adipisci distinctio incidunt, alias, fugit eveniet corrupti minus?</p>
+                        <p>
+                            Este projeto é uma aplicação web interativa que reúne três ferramentas essenciais do dia a dia: cronômetro, relógio em tempo real e temporizador personalizável.
+                        </p>
                         <div>
                             <a href="https://github.com/HelderZX/clock" target="_blank">
                                 <button type="button" class="btn-icon"><i class="fa-brands fa-github"></i></button>
                             </a>
                             <a href="https://helderzx.github.io/clock/" target="_blank">
-                                <button type="button" class="btn-open">Jogar <i
+                                <button type="button" class="btn-open">Experimentar <i
                                         class="fa-solid fa-arrow-right"></i></button>
                             </a>
                         </div>
                     </div>
                 </div>
                 <div class="image-side">
+                    <button class="btn-previous"><i class="fa-solid fa-arrow-left"></i></button>
+                    <img src="src/images/timer/screen1.png" class="screen" data-theme="light" alt="timer-logo">
+                    <img src="src/images/timer/screen2.png" class="screen active" data-theme="dark" alt="timer-logo">
+                    <img src="src/images/timer/screen3.png" class="screen" data-theme="light" alt="timer-logo">
+                    <button class="btn-next"><i class="fa-solid fa-arrow-right"></i></button>
                 </div>
             </div>
             <!-- 
@@ -282,11 +296,104 @@
             -->
         </div>
     </div>
-    <div class="footer">
-        <div class="content">
-            <div class="footer-main">
-                <p>© 2023 Helder Andrade</p>
-                <p>Todos os direitos reservados.</p>
+    
+    <div class="container projects">
+        <div class="main">
+            <div class="content">
+                <div class="works">
+                    <div class="timeline">
+                        <span class="title">
+                            <span class="circle-icon">
+                                <i class="fa-solid fa-graduation-cap"></i>
+                            </span>
+                            <h1>EDUCAÇÃO</h1>
+                        </span>
+                        <div class="work">
+                            <div class="period">
+                                <p class="start">2019</p>
+                                <i class="fa-solid fa-arrow-right"></i>
+                                <p class="end">2022</p>
+                            </div>
+                            <span class="line">
+                                <span class="point"></span>
+                            </span>
+                            <div class="description">
+                                <h4>Secundário</h4>
+                                <b>Gestão e Programação de Sistemas Informáticos</b>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline">
+                        <span class="title">
+                            <span class="circle-icon">
+                                <i class="fa-solid fa-briefcase"></i>
+                            </span>
+                            <h1>EXPERIÊNCIA</h1>
+                        </span>
+                        <div class="work">
+                            <div class="period">
+                                <p class="start">2022</p>
+                                <i class="fa-solid fa-arrow-right"></i>
+                                <p class="end">2023</p>
+                            </div>
+                            <span class="line">
+                                <span class="point"></span>
+                            </span>
+                            <div class="description">
+                                <h4>Polissistemas</h4>
+                                <b>Técnico de Equipamentos de Escritório</b>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
+                            </div>
+                        </div>
+                        <div class="work">
+                            <div class="period">
+                                <p class="start">2023</p>
+                                <i class="fa-solid fa-arrow-right"></i>
+                                <p class="end">
+                                    <script>document.write(new Date().getFullYear())</script>
+                                </p>
+                            </div>
+                            <span class="line">
+                                <span class="point"></span>
+                            </span>
+                            <div class="description">
+                                <h4>Controlink</h4>
+                                <b>Programador</b>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container contact-me">
+        <div class="main">
+            <div class="content">
+                <div class="contact-info">
+                    <div class="contact-aside">
+                        <img class="contact-image" src="src/images/logos/lets-work.svg" alt="contact" />
+                    </div>
+                    <form class="contact-form">
+                        <span class="title">
+                            <span class="circle-icon">
+                                <i class="fa-solid fa-envelope"></i>
+                            </span>
+                            <h1>Vamos Conversar</h1>
+                        </span>
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" class="input" placeholder="Nome" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" class="input" placeholder="Email" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" class="textarea" rows="4" placeholder="Continua... estou a ouvir" required></textarea>
+                        </div>
+                        <button type="submit" class="btn-submit">Enviar</button>
+                    </form>
+                </div>
             </div>
         </div>
     </div>

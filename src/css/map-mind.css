@@ -1,0 +1,69 @@
+/* ---------- Map Mind ---------- */
+
+/* --------------------------------- */
+
+.map-mind-project .image-side {
+    display: flex;
+    gap: 3rem;
+}
+
+.map-mind-project .image-side .logo {
+    width: calc(780px / 1);
+    height: calc(384px / 1);
+    align-self: center;
+    margin-top: 40px;
+}
+
+.map-mind-project .description-side {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    flex-grow: 1;
+}
+
+.map-mind-project .description-side .title {
+    font-size: 28px;
+    height: 50%;
+    display: flex;
+    align-items: flex-end;
+}
+
+.map-mind-project .description-side .description {
+    font-size: 18px;
+    color: white;
+    width: 70%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+    gap: 1rem;
+}
+
+.map-mind-project .description-side .description .p {
+    height: fit-content;
+}
+
+.map-mind-project .description-side .description .btn-open {
+    height: fit-content;
+}
+
+.map-mind-project .content {
+    flex-grow: 1;
+    display: flex;
+    height: 100%;
+    z-index: 2;
+    overflow: hidden;
+}
+
+@media only screen and (max-width: 768px) {
+    .map-mind-project .description-side .title h1 {
+        font-size: 30px;
+    }
+
+    .map-mind-project .description-side .description {
+        font-size: 16px;
+    }
+}
