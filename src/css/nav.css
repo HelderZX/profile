@@ -101,7 +101,7 @@
     }
 
     .navbar-items li:last-child {
-        margin: auto;
+        width: 100%;
     }
 
     .navbar-items a {
@@ -109,6 +109,11 @@
         width: 100%;
         display: block;
         padding: 0.5rem 0;
+    }
+
+    .nav button {
+        margin-top: 0.5rem;
+        width: 100%;
     }
 
     .navbar-items:has(.logo:not(.active)) li {

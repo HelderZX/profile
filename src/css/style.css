@@ -700,7 +700,7 @@ a:has(.btn-open, .btn-icon) {
     border-radius: 0.5rem;
     font-size: 1rem;
     background: var(--black);
-    color: var(--black);
+    color: var(--white);
     transition: border-color 0.2s;
     font-family: "Roboto", sans-serif;
 }
