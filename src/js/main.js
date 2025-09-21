@@ -55,22 +55,8 @@ function slideHabilities() {
     function showNextHability() {
         $habilities.eq(currentIndex).fadeOut(() => {
             currentIndex = (currentIndex + 1) % $habilities.length;
-            $habilities.eq(currentIndex).text("");
-
-            $habilities.eq(currentIndex).fadeIn(() => {
-                let text = $habilities.eq(currentIndex).attr("data-text");
-                let i = 0;
-
-                function type() {
-                    if (i < text.length) {
-                        $habilities.eq(currentIndex).append(text.charAt(i));
-                        i++;
-                        setTimeout(type, 100);
-                    }
-                }
-
-                type();
-            });
+            $habilities.eq(currentIndex).text($habilities.eq(currentIndex).attr("data-text"));
+            $habilities.eq(currentIndex).fadeIn();
         });
     }
 
