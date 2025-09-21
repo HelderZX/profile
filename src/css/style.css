@@ -29,7 +29,7 @@ body {
     background-attachment: fixed;
 }
 
-p {
+p, h1 {
     margin: 0;
     padding: 0;
 }
@@ -39,23 +39,116 @@ p {
     padding: 0 1rem;
 }
 
+.main {
+    height: 100%;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+}
+
 .title {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 1rem;
+    color: var(--white);
 }
 
-.title h1 {
-    font-size: 28px;
-    height: 50%;
-    display: flex;
-    align-items: flex-end;
+.project .content {
+    flex-direction: row;
 }
+
+.project .image-side {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+    height: 100%;
+}
+
+.project .description-side {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 0 4rem;
+    width: 60%;
+    height: 100%;
+    z-index: 2;
+}
+
+.project .description-side .title {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    box-sizing: border-box;
+    margin-bottom: 2rem;
+    color: var(--black);
+    height: 50%;
+}
+
+.project .description-side .description {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+
+    box-sizing: border-box;
+    padding-top: 2rem;
+
+    color: var(--white);
+    height: 50%;
+    font-size: 18px;
+    gap: 1rem;
+}
+
+@media only screen and (max-width: 1240px) {
+    .project .description-side {
+        padding: 0 2rem;
+    }
+
+    .project .description-side .description {
+        font-size: 16px;
+    }
+}
+
 
 @media only screen and (max-width: 768px) {
-    .title h1 {
-        font-size: 24px;
+    .title {
+        font-size: 12px;
+    }
+
+    .project .content {
+        flex-direction: column-reverse
+    }
+
+    .project .image-side {
+        height: 50%;
+        width: 100%;
+    }
+
+    .project .description-side {
+        padding: 0rem 1rem;
+        height: 50%;
+        width: 100%;
+    }
+
+    .project .description-side .title {
+        height: fit-content;
+        font-size: 14px;
+        margin-top: 3rem;
+        margin-bottom: 1rem;
+        color: var(--white);
+    }
+
+    .project .description-side .description {
+        height: fit-content;
+        font-size: 16px;
+        padding-top: 0;
+        text-align: start;
     }
 }
 
@@ -156,6 +249,10 @@ p {
     margin: 5px;
 }
 
+a:has(.btn-open, .btn-icon) {
+    text-decoration: none;
+}
+
 .btn-icon {
     border-radius: 50%;
     border: 1px solid white;
@@ -217,7 +314,6 @@ p {
 .container.projects {
     background: #141414;
     background: linear-gradient(90deg, rgba(20, 20, 20, 1) 0%, rgba(38, 38, 38, 1) 50%, rgba(66, 66, 66, 1) 100%);
-    color: white;
 }
 
 .container.projects h1 {
@@ -225,15 +321,13 @@ p {
     margin-bottom: 40px;
 }
 
-.container .content {
-    width: 100%;
-}
-
 .cards {
+    position: relative;
     padding-bottom: 1rem;
     display: flex;
-    gap: 2rem;
     overflow: auto;
+    box-sizing: border-box;
+    width: 100%;
     transition: height 0.3s ease-in-out;
 }
 
@@ -266,11 +360,59 @@ p {
     background: var(--orange);
 }
 
+:is(.cards, .technologies) .arrow {
+    position: sticky;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    top: 0;
+    bottom: 0;
+    width: 50px;
+    cursor: pointer;
+    transition: 0.3s;
+    z-index: 10;
+    width: 0px;
+}
+
+:is(.cards, .technologies):hover .arrow {
+    opacity: 1;
+}
+
+.cards .arrow-left {
+    left: 1.5rem;
+}
+
+.cards .arrow-right {
+    right: 1.5rem;
+}
+
+.technologies .arrow-left {
+    left: 1rem;
+}
+
+.technologies .arrow-right {
+    right: 1rem;
+}
+
+:is(.cards, .technologies) .arrow i{
+    color: var(--white);
+    font-size: 24px;
+}
+
+@media (max-width: 1024px) {
+    .cards .arrow,
+    .technologies .arrow {
+        opacity: 1;
+    }
+}
+
 .card-img {
     border: 1px solid var(--grey);
     width: 250px;
     height: 200px;
     overflow: hidden;
+    margin-right: 20px;
 
     display: flex;
     justify-content: center;
@@ -278,6 +420,7 @@ p {
     padding: 0 2rem;
     transition: .1s;
     border-radius: 1rem;
+    transition: .1s;
 }
 
 .card-img img {
@@ -302,6 +445,24 @@ p {
     background-color: var(--white);
 }
 
+@media (max-width: 1240px) {
+    .card-img {
+        width: calc(250px / 1.2);
+        height: calc(200px / 1.2);
+        margin-right: 15px;
+        padding: 1rem 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .card-img {
+        width: calc(250px / 1.7);
+        height: calc(200px / 1.7);
+        margin-right: 10px;
+        padding: 1rem 2rem;
+    }
+}
+
 /* ---------- Projects ---------- */
 
 /* ----------------------------- */
@@ -319,18 +480,21 @@ p {
     width: 100%;
     position: absolute;
     bottom: 0;
-    z-index: 1;
+    left: 0;
 }
 
 /* ---------- Timeline ---------- */
 
 .technologies {
+    position: relative;
     display: flex;
     align-items: center;
     background-color: #1e1e1e;
     border-radius: 1rem;
     padding: 1rem;
     color: #ffffff;
+    box-sizing: border-box;
+    width: 100%;
     overflow-x: auto;
     border: 1px solid rgb(116, 116, 116);
     transition: height 0.3s ease-in-out;
@@ -361,7 +525,7 @@ p {
 
 @media (max-width: 768px) {
     .technologies {
-        gap: 5px;
+        gap: 0.5rem;
     }
 
     .technologies .logo {
@@ -451,6 +615,7 @@ p {
 }
 
 .work .description h4{
+    color: var(--white);
     margin: 5px;
     font-size: 22px;
 }
@@ -462,6 +627,7 @@ p {
 
 .work .description p{
     margin: 5px;
+    color: var(--white);
 }
 
 .wave {
@@ -490,13 +656,13 @@ p {
 @media (max-width: 768px) {
     .works {
         gap: 0;
+        padding-bottom: 2rem;
     }
 
     .work {
         flex-direction: column;
         align-items: center;
         text-align: center;
-        margin-bottom: 4rem;
     }
 
     .work .period {
@@ -536,6 +702,7 @@ p {
     background: var(--black);
     color: var(--black);
     transition: border-color 0.2s;
+    font-family: "Roboto", sans-serif;
 }
 
 .input:focus,
@@ -568,7 +735,7 @@ p {
     align-items: center;
     gap: 3rem;
     position: relative;
-    flex-grow: 1;
+    width: 50%;
 }
 
 .image-side .screen {
@@ -639,5 +806,5 @@ p {
 }
 
 .image-side .btn-next {
-    right: 1rem;
+    right: -1rem;
 }

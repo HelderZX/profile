@@ -3,6 +3,12 @@ console.log("main.js");
 $(document).on("click", ".card", (event) => {
     let $card = $(event.currentTarget)
     let target = $(event.currentTarget).attr("target")
+
+    if ($card.hasClass("selected")) {
+        $card.removeClass("selected");
+        $(target).parent().slideUp("fast");
+        return;
+    }
     
     $('.card').removeClass("selected");
     $('.project').hide();
@@ -11,7 +17,7 @@ $(document).on("click", ".card", (event) => {
 
     $(target).parent().slideDown("fast", () => {
         $('html').animate({
-            //scrollTop: $(target).offset().top
+            scrollTop: $(target).offset().top
         });
     });
 });
@@ -100,5 +106,16 @@ $(document).on("click", ".navbar-items .logo", (event) => {
 $(document).on("click", (event) => {
     if (!$(event.target).closest(".navbar-items").length) {
         $(".navbar-items .logo").removeClass("active");
+    }
+});
+
+
+$(document).on("click", ".cards .arrow, .technologies .arrow", (event) => {
+    let $cards = $(event.currentTarget).closest(".cards, .technologies");
+    let scrollAmount = 250;
+    if ($(event.currentTarget).hasClass("arrow-left")) {
+        $cards.animate({ scrollLeft: "-=" + scrollAmount }, 300);
+    } else {
+        $cards.animate({ scrollLeft: "+=" + scrollAmount }, 300);
     }
 });

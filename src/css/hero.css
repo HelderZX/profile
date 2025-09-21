@@ -189,7 +189,7 @@
     }
 
     .personal-info .info p {
-        font-size: 18px;
+        font-size: 20px;
         text-align: center;
     }
 
@@ -209,7 +209,7 @@
         flex-direction: column-reverse;
         align-items: center;
         max-width: 80%;
-        margin-top: 100px;
+        margin-top: 0px;
     }
 
     .personal-info .picture {

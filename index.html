@@ -105,12 +105,18 @@
                     <h1>TECNOLOGIAS</h1>
                 </span>
                 <div class="technologies">
+                    <div class="arrow arrow-left">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </div>
                     <img class="logo" src="src/images/logos/css.svg" alt="profile" />
                     <img class="logo" src="src/images/logos/javascript.svg" alt="profile" />
                     <img class="logo" src="src/images/logos/laravel.svg" alt="profile" />
                     <img class="logo" src="src/images/logos/php.svg" alt="profile" />
                     <img class="logo" src="src/images/logos/vuejs.svg" alt="profile" />
                     <img class="logo" src="src/images/logos/bootstrap.svg" alt="profile" />
+                    <div class="arrow arrow-right">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </div>
                 </div>
             </div>
         </div>
@@ -125,6 +131,9 @@
                     <h1>PROJETOS</h1>
                 </span>
                 <div class="cards">
+                    <div class="arrow arrow-left">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </div>
                     <div class="card" target="#map-mind">
                         <div class="card-img">
                             <img src="src/images/map-mind/logo.svg" alt="map-mind-logo">
@@ -145,6 +154,9 @@
                             <img src="src/images/timer/logo.svg" alt="timer-logo">
                         </div>
                     </div>
+                    <div class="arrow arrow-right">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </div>
                 </div>
             </div>
         </div>
@@ -160,10 +172,7 @@
                     <div class="description">
                         <div>
                             <p class="mb-0">
-                                Explora o mapa e aprende curiosidades sobre cada país, desde localização até informações culturais e geográficas. Pesquisa livremente e expande os teus conhecimentos no Modo Exploração.
-                            </p>
-                            <p class="mb-0">
-                                Quando estiveres pronto para testar a tua memória e reflexos, entra no Modo Desafio: clica rapidamente nos países pedidos antes que o tempo acabe e prova os teus conhecimentos de geografia.
+                                Explora o mapa e aprende curiosidades sobre cada país, desde localização até informações culturais e geográficas.
                             </p>
                             <p class="mb-0">
                                 Um jogo educativo, dinâmico e envolvente — perfeito para aprender e divertir-te ao mesmo tempo!
@@ -195,9 +204,12 @@
                         <h1>FLAPPY DUCK</h1>
                     </div>
                     <div class="description">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt quibusdam dolore deleniti
-                            voluptatum doloremque incidunt. Excepturi atque voluptates odit sint temporibus dignissimos
-                            adipisci distinctio incidunt, alias, fugit eveniet corrupti minus?</p>
+                        <p>
+                            Um jogo inspirado no clássico Flappy Bird, desenvolvido para Android.
+                        </p>
+                        <p>
+                             O jogador controla um pato que precisa de atravessar obstáculos, testando reflexos e coordenação.
+                        </p>
                         <div>
                             <a href="https://github.com/HelderZX/flappy-duck" target="_blank">
                                 <button type="button" class="btn-icon"><i class="fa-brands fa-github"></i></button>
@@ -371,29 +383,27 @@
     <div class="container contact-me">
         <div class="main">
             <div class="content">
-                <div class="contact-info">
-                    <div class="contact-aside">
-                        <img class="contact-image" src="src/images/logos/lets-work.svg" alt="contact" />
-                    </div>
-                    <form class="contact-form">
-                        <span class="title">
-                            <span class="circle-icon">
-                                <i class="fa-solid fa-envelope"></i>
-                            </span>
-                            <h1>Vamos Conversar</h1>
-                        </span>
-                        <div class="form-group">
-                            <input type="text" id="name" name="name" class="input" placeholder="Nome" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" id="email" name="email" class="input" placeholder="Email" required>
-                        </div>
-                        <div class="form-group">
-                            <textarea id="message" name="message" class="textarea" rows="4" placeholder="Continua... estou a ouvir" required></textarea>
-                        </div>
-                        <button type="submit" class="btn-submit">Enviar</button>
-                    </form>
+                <div class="contact-aside">
+                    <img class="contact-image" src="src/images/logos/lets-work.svg" alt="contact" />
                 </div>
+                <form class="contact-form">
+                    <span class="title">
+                        <span class="circle-icon">
+                            <i class="fa-solid fa-envelope"></i>
+                        </span>
+                        <h1>CONTACTO</h1>
+                    </span>
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" class="input" placeholder="Nome" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" class="input" placeholder="Email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" class="textarea" rows="4" placeholder="Continua... estou a ouvir" required></textarea>
+                    </div>
+                    <button type="submit" class="btn-submit">Enviar</button>
+                </form>
             </div>
         </div>
     </div>
