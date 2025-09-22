@@ -33,6 +33,12 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
         integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- Mail -->
+     <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+     <!-- Alert -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.css">
 </head>
 
 <body>
@@ -114,6 +120,8 @@
                     <img class="logo" src="src/images/logos/php.svg" alt="profile" />
                     <img class="logo" src="src/images/logos/vuejs.svg" alt="profile" />
                     <img class="logo" src="src/images/logos/bootstrap.svg" alt="profile" />
+                    <img class="logo" src="src/images/logos/nodejs.svg" alt="profile" />
+                    <img class="logo" src="src/images/logos/tailwindcss.svg" alt="profile" />
                     <div class="arrow arrow-right">
                         <i class="fa-solid fa-chevron-right"></i>
                     </div>
@@ -171,10 +179,10 @@
                     </div>
                     <div class="description">
                         <div>
-                            <p class="mb-0">
+                            <p>
                                 Explora o mapa e aprende curiosidades sobre cada país, desde localização até informações culturais e geográficas.
                             </p>
-                            <p class="mb-0">
+                            <p>
                                 Um jogo educativo, dinâmico e envolvente — perfeito para aprender e divertir-te ao mesmo tempo!
                             </p>
                         </div>
@@ -386,7 +394,7 @@
                 <div class="contact-aside">
                     <img class="contact-image" src="src/images/logos/lets-work.svg" alt="contact" />
                 </div>
-                <form class="contact-form">
+                <form id="contact-form" class="contact-form">
                     <span class="title">
                         <span class="circle-icon">
                             <i class="fa-solid fa-envelope"></i>
@@ -407,7 +415,9 @@
             </div>
         </div>
     </div>
+    <!-- Toast -->
     <script type="module" src="src/js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.js"></script>
 </body>
 
 </html>

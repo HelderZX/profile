@@ -9,6 +9,12 @@
 
     --white: #f5f5f5;
     --white-opacity: #f5f5f5cc;
+
+    --green: #4BB543;
+    --green-opacity: #4BB543cc;
+
+    --red: #FF5252;
+    --red-opacity: #FF5252cc;
 }
 
 html {
@@ -546,6 +552,7 @@ a:has(.btn-open, .btn-icon) {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-bottom: 2rem;
     width: 100%;
     max-width: 600px;
 }
@@ -776,15 +783,10 @@ a:has(.btn-open, .btn-icon) {
     border-radius: 50%;
 }
 
-.image-side .btn-previous {
+.image-side .btn-previous,
+.image-side .btn-next {
     color: var(--white);
     background-color: var(--black);
-    outline: 1px solid var(--grey);
-}
-
-.image-side .btn-next {
-    color: var(--black);
-    background-color: var(--white);
     outline: 1px solid var(--grey);
 }
 

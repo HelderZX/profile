@@ -1,5 +1,21 @@
 console.log("main.js");
 
+emailjs.init("7J_uLiMM8wD79jxHH");
+const notyf = new Notyf();
+
+$(document).on("submit", "#contact-form", function(event) {
+    event.preventDefault();
+    
+    emailjs.sendForm("service_ysx6h4o", "template_izdqvki", this)
+        .then(() => {
+            notyf.success('Email enviado com sucesso!');
+
+            $("#contact-form")[0].reset();
+        }, (error) => {
+            notyf.error('Erro ao enviar email: ' + JSON.stringify(error));
+        });
+});
+
 $(document).on("click", ".card", (event) => {
     let $card = $(event.currentTarget)
     let target = $(event.currentTarget).attr("target")
@@ -94,7 +110,6 @@ $(document).on("click", (event) => {
         $(".navbar-items .logo").removeClass("active");
     }
 });
-
 
 $(document).on("click", ".cards .arrow, .technologies .arrow", (event) => {
     let $cards = $(event.currentTarget).closest(".cards, .technologies");
