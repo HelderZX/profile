@@ -5,7 +5,10 @@ const notyf = new Notyf();
 
 $(document).on("submit", "#contact-form", function(event) {
     event.preventDefault();
-    
+    const $button = $(this).find("button[type=submit]");
+    $button.prop("disabled", true);
+    $button.html('<i class="fa-solid fa-spinner fa-spin"></i>');
+
     emailjs.sendForm("service_ysx6h4o", "template_izdqvki", this)
         .then(() => {
             notyf.success('Email enviado com sucesso!');
@@ -13,6 +16,10 @@ $(document).on("submit", "#contact-form", function(event) {
             $("#contact-form")[0].reset();
         }, (error) => {
             notyf.error('Erro ao enviar email: ' + JSON.stringify(error));
+        })
+        .finally(() => {
+            $button.prop("disabled", false);
+            $button.html('Enviar');
         });
 });
 
