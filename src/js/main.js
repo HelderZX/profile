@@ -39,9 +39,11 @@ $(document).on("click", ".card", (event) => {
     $card.addClass("selected");
 
     $(target).parent().slideDown("fast", () => {
-        $('html').animate({
+        if (window.innerWidth < 1024) {
+            $('html').animate({
             scrollTop: $(target).offset().top
-        });
+            });
+        }
     });
 });
 
@@ -126,4 +128,9 @@ $(document).on("click", ".cards .arrow, .technologies .arrow", (event) => {
     } else {
         $cards.animate({ scrollLeft: "+=" + scrollAmount }, 300);
     }
+});
+
+$(document).on("click", ".nav li button", (event) => {
+    const pdfPath = "src/pdf/Resume - Helder Andrade.pdf";
+    window.open(pdfPath, '_blank');
 });

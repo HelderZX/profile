@@ -546,6 +546,7 @@ a:has(.btn-open, .btn-icon) {
     justify-content: center;
     flex-wrap: wrap;
     gap: 2rem;
+    padding-bottom: 2rem;
 }
 
 .work {
@@ -554,7 +555,6 @@ a:has(.btn-open, .btn-icon) {
     justify-content: center;
     width: 100%;
     max-width: 600px;
-    padding-bottom: 2rem;
 }
 
 .work .period {
@@ -570,7 +570,7 @@ a:has(.btn-open, .btn-icon) {
     display: inline-block;
     position: relative;
     width: 1px;
-    height: 150px;
+    height: 310px
 }
 
 .work .line::before {
@@ -621,14 +621,15 @@ a:has(.btn-open, .btn-icon) {
     padding: 0 1rem;
 }
 
-.work .description h4{
+.work .description .enterprise{
     color: var(--white);
     margin: 5px;
     font-size: 22px;
 }
 
-.work .description b{
+.work .description .function{
     margin: 5px;
+    font-weight: bold;
     color: var(--orange);
 }
 
@@ -795,18 +796,15 @@ a:has(.btn-open, .btn-icon) {
     outline-offset: 5px;
 }
 
-.image-side .btn-next {
-    margin-right: calc(100% * 0.15);
-}
 
 .image-side:hover :is(.btn-previous, .btn-next) {
     opacity: 1;
 }
 
 .image-side .btn-previous {
-    left: 2rem;
+    left: 4rem;
 }
 
 .image-side .btn-next {
-    right: -1rem;
+    right: 4rem;
 }

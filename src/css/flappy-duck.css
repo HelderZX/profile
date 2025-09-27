@@ -4,7 +4,7 @@
 
 .flappy-project .image-side {
     display: flex;
-    gap: 3rem;
+    gap: 1rem;
     border-bottom: 4px solid #161616;
     border-radius: 1rem;
 }
