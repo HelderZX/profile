@@ -56,6 +56,7 @@
     border-radius: 1rem;
 
     cursor: default;
+    transition: 0.2s;
 }
 
 .personal-info .habilities:hover {
