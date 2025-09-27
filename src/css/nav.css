@@ -116,7 +116,7 @@
         width: 100%;
     }
 
-    .navbar-items:has(.logo:not(.active)) li {
+    .nav:not(.active) li {
         display: none;
     }
 }

@@ -110,13 +110,13 @@ $(window).on("scroll", () => {
     }
 });
 
-$(document).on("click", ".navbar-items .logo", (event) => {
-    $(".navbar-items .logo").toggleClass("active");
+$(document).on("click", ".nav", function() {
+    $(this).toggleClass("active");
 });
 
 $(document).on("click", (event) => {
-    if (!$(event.target).closest(".navbar-items").length) {
-        $(".navbar-items .logo").removeClass("active");
+    if (!$(event.target).closest(".nav").length) {
+        $(".nav").removeClass("active");
     }
 });
 
