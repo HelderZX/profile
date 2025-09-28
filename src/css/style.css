@@ -811,9 +811,9 @@ a:has(.btn-open, .btn-icon) {
 }
 
 .image-side .btn-previous {
-    left: 4rem;
+    left: 2.5rem;
 }
 
 .image-side .btn-next {
-    right: 4rem;
+    right: 2.5rem;
 }
