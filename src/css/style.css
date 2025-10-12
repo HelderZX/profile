@@ -811,9 +811,29 @@ a:has(.btn-open, .btn-icon) {
 }
 
 .image-side .btn-previous {
-    left: 2.5rem;
+    left: 5rem;
 }
 
 .image-side .btn-next {
-    right: 2.5rem;
+    right: 5rem;
+}
+
+@media (max-width: 1240px) {
+    .image-side .btn-previous {
+        left: 3.5rem;
+    }
+
+    .image-side .btn-next {
+        right: 3.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .image-side .btn-previous {
+        left: 2.5rem;
+    }
+
+    .image-side .btn-next {
+        right: 2.5rem;
+    }
 }
