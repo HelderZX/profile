@@ -223,3 +223,9 @@ async function handleSubmit() {
   align-self: flex-end;
 }
 </style>
+
+<style>
+.p-toast {
+  max-width: calc(100vw - 2rem) !important;
+}
+</style>
