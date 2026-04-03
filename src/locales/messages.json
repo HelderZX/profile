@@ -1,0 +1,263 @@
+{
+  "pt": {
+    "nav": {
+      "profile": "Perfil",
+      "technologies": "Tecnologias",
+      "projects": "Projetos",
+      "experiences": "Experiências",
+      "resume": "Currículo"
+    },
+    "greeting": {
+      "hello": "Olá,",
+      "name": "Sou o Helder"
+    },
+    "intro": {
+      "description": "Um programador a desbravar o mundo do front e do back-end para criar experiências digitais cativantes."
+    },
+    "habilities": ["Front-end", "Back-end", "Games"],
+    "sections": {
+      "technologies": "TECNOLOGIAS",
+      "projects": "PROJETOS",
+      "education": "EDUCAÇÃO",
+      "experience": "EXPERIÊNCIA",
+      "contact": "CONTACTO"
+    },
+    "education_details": {
+      "secondary": "Secundário",
+      "course": "Gestão e Programação de Sistemas Informáticos",
+      "internship": "Estágio:",
+      "internship_desc": "suporte ao parque informático.",
+      "languages": "Aprendizagem de linguagens:",
+      "languages_desc": "C, C#, PHP, Java, JavaScript, HTML, CSS, Spring Boot, Laravel, Unity.",
+      "final_project": "Projeto final:",
+      "final_project_desc": "desenvolvimento de jogo 2D em GameMaker."
+    },
+    "work": {
+      "polissistemas": {
+        "name": "Polissistemas",
+        "role": "Técnico de Equipamentos de Escritório",
+        "desc1": "Instalação e manutenção de impressoras e computadores.",
+        "admin": "Apoio administrativo:",
+        "admin_desc": "atendimento a clientes, faturação, guias de transporte, organização de armazém.",
+        "monitoring": "Monitorização de consumíveis e gestão de clientes."
+      },
+      "controlink": {
+        "name": "Controlink",
+        "role": "Programador",
+        "desc": "Desenvolvimento e manutenção do Portal Cashmatic e do sistema da Goldsuisse.",
+        "technologies": "Tecnologias:",
+        "technologies_desc": "Laravel, JavaScript, jQuery, HTML, CSS, Bootstrap, Firebase, utilização de Git/GitHub em equipa.",
+        "features": "Funcionalidades:",
+        "features_desc": "geração de relatórios (Excel, PDF, CSV), notificações push, emails, formulários dinâmicos, integrações com Winmax4 e WooCommerce.",
+        "servers": "Gestão de servidores (crons, configs).",
+        "meetings": "Reuniões com clientes para levantamento de requisitos e definição de soluções."
+      }
+    },
+    "project": {
+      "mapmind": {
+        "title": "MAP MIND",
+        "open": "Ver Projeto",
+        "desc1": "Explora o mapa e aprende curiosidades sobre cada país, desde localização até informações culturais e geográficas.",
+        "desc2": "Um jogo educativo, dinâmico e envolvente — perfeito para aprender e divertir-te ao mesmo tempo!"
+      },
+      "flappy": {
+        "title": "FLAPPY DUCK",
+        "desc1": "Um jogo inspirado no clássico Flappy Bird, desenvolvido para Android.",
+        "desc2": "O jogador controla um pato que precisa de atravessar obstáculos, testando reflexos e coordenação.",
+        "coming": "Em breve"
+      },
+      "tictactoe": {
+        "title": "TIC-TAC-TOE",
+        "play": "Jogar",
+        "desc": "Um jogo clássico de tabuleiro desenvolvido para o navegador. Permite que dois jogadores disputem entre si num tabuleiro 3x3, com lógica para detetar automaticamente vitórias, empates e reiniciar a partida. O foco esteve em criar uma interface simples e intuitiva, aliando boa experiência de utilização à implementação da lógica do jogo."
+      },
+      "timer": {
+        "title": "Timer",
+        "try": "Experimentar",
+        "desc": "Este projeto é uma aplicação web interativa que reúne três ferramentas essenciais do dia a dia: cronômetro, relógio em tempo real e temporizador personalizável."
+      }
+    },
+    "contact": {
+      "name_placeholder": "Nome",
+      "email_placeholder": "Email",
+      "message_placeholder": "Continua... estou a ouvir",
+      "submit": "Enviar",
+      "sent": "Email enviado com sucesso!",
+      "error": "Erro ao enviar email"
+    }
+  },
+  "en": {
+    "nav": {
+      "profile": "Profile",
+      "technologies": "Technologies",
+      "projects": "Projects",
+      "experiences": "Experience",
+      "resume": "Resume"
+    },
+    "greeting": {
+      "hello": "Hello,",
+      "name": "I'm Helder"
+    },
+    "intro": {
+      "description": "A developer exploring both front-end and back-end to craft engaging digital experiences."
+    },
+    "habilities": ["Front-end", "Back-end", "Games"],
+    "sections": {
+      "technologies": "TECHNOLOGIES",
+      "projects": "PROJECTS",
+      "education": "EDUCATION",
+      "experience": "EXPERIENCE",
+      "contact": "CONTACT"
+    },
+    "education_details": {
+      "secondary": "Secondary School",
+      "course": "Management and Programming of Computer Systems",
+      "internship": "Internship:",
+      "internship_desc": "IT support.",
+      "languages": "Learned languages:",
+      "languages_desc": "C, C#, PHP, Java, JavaScript, HTML, CSS, Spring Boot, Laravel, Unity.",
+      "final_project": "Final project:",
+      "final_project_desc": "development of a 2D game in GameMaker."
+    },
+    "work": {
+      "polissistemas": {
+        "name": "Polissistemas",
+        "role": "Office Equipment Technician",
+        "desc1": "Installation and maintenance of printers and computers.",
+        "admin": "Administrative support:",
+        "admin_desc": "customer service, invoicing, shipping guides, warehouse organization.",
+        "monitoring": "Consumables monitoring and customer management."
+      },
+      "controlink": {
+        "name": "Controlink",
+        "role": "Programmer",
+        "desc": "Development and maintenance of the Cashmatic Portal and the Goldsuisse system.",
+        "technologies": "Technologies:",
+        "technologies_desc": "Laravel, JavaScript, jQuery, HTML, CSS, Bootstrap, Firebase, using Git/GitHub in a team.",
+        "features": "Features:",
+        "features_desc": "report generation (Excel, PDF, CSV), push notifications, emails, dynamic forms, integrations with Winmax4 and WooCommerce.",
+        "servers": "Server management (crons, configs).",
+        "meetings": "Meetings with clients to gather requirements and define solutions."
+      }
+    },
+    "project": {
+      "mapmind": {
+        "title": "MAP MIND",
+        "open": "View Project",
+        "desc1": "Explore the map and learn curiosities about each country, from location to cultural and geographic information.",
+        "desc2": "An educational, dynamic and engaging game — perfect to learn and have fun at the same time!"
+      },
+      "flappy": {
+        "title": "FLAPPY DUCK",
+        "desc1": "A game inspired by the classic Flappy Bird, developed for Android.",
+        "desc2": "The player controls a duck that must cross obstacles, testing reflexes and coordination.",
+        "coming": "Coming soon"
+      },
+      "tictactoe": {
+        "title": "TIC-TAC-TOE",
+        "play": "Play",
+        "desc": "A classic board game developed for the browser. It allows two players to compete on a 3x3 board, with logic to automatically detect wins, draws and reset the game. The focus was to build a simple and intuitive UI, combining good UX with the game's logic implementation."
+      },
+      "timer": {
+        "title": "Timer",
+        "try": "Try it",
+        "desc": "This project is an interactive web app that brings together three essential daily tools: stopwatch, real-time clock and a customizable timer."
+      }
+    },
+    "contact": {
+      "name_placeholder": "Name",
+      "email_placeholder": "Email",
+      "message_placeholder": "Write a message... I'm listening",
+      "submit": "Send",
+      "sent": "Email sent successfully!",
+      "error": "Error sending email"
+    }
+  },
+  "fr": {
+    "nav": {
+      "profile": "Profil",
+      "technologies": "Technologies",
+      "projects": "Projets",
+      "experiences": "Expériences",
+      "resume": "CV"
+    },
+    "greeting": {
+      "hello": "Bonjour,",
+      "name": "Je suis Helder"
+    },
+    "intro": {
+      "description": "Un développeur explorant le front-end et le back-end pour créer des expériences numériques captivantes."
+    },
+    "habilities": ["Front-end", "Back-end", "Jeux"],
+    "sections": {
+      "technologies": "TECHNOLOGIES",
+      "projects": "PROJETS",
+      "education": "ÉDUCATION",
+      "experience": "EXPÉRIENCE",
+      "contact": "CONTACT"
+    },
+    "education_details": {
+      "secondary": "Lycée",
+      "course": "Gestion et Programmation de Systèmes Informatiques",
+      "internship": "Stage :",
+      "internship_desc": "support au parc informatique.",
+      "languages": "Langages appris :",
+      "languages_desc": "C, C#, PHP, Java, JavaScript, HTML, CSS, Spring Boot, Laravel, Unity.",
+      "final_project": "Projet final :",
+      "final_project_desc": "développement d'un jeu 2D avec GameMaker."
+    },
+    "work": {
+      "polissistemas": {
+        "name": "Polissistemas",
+        "role": "Technicien d'Équipements de Bureau",
+        "desc1": "Installation et maintenance d'imprimantes et d'ordinateurs.",
+        "admin": "Support administratif :",
+        "admin_desc": "service client, facturation, bons de transport, organisation d'entrepôt.",
+        "monitoring": "Suivi des consommables et gestion des clients."
+      },
+      "controlink": {
+        "name": "Controlink",
+        "role": "Programmeur",
+        "desc": "Développement et maintenance du Portail Cashmatic et du système Goldsuisse.",
+        "technologies": "Technologies :",
+        "technologies_desc": "Laravel, JavaScript, jQuery, HTML, CSS, Bootstrap, Firebase, utilisation de Git/GitHub en équipe.",
+        "features": "Fonctionnalités :",
+        "features_desc": "génération de rapports (Excel, PDF, CSV), notifications push, emails, formulaires dynamiques, intégrations avec Winmax4 et WooCommerce.",
+        "servers": "Gestion de serveurs (crons, configs).",
+        "meetings": "Réunions avec les clients pour le recueil des besoins et la définition de solutions."
+      }
+    },
+    "project": {
+      "mapmind": {
+        "title": "MAP MIND",
+        "open": "Voir le Projet",
+        "desc1": "Explore la carte et découvre des curiosités sur chaque pays, de la localisation aux informations culturelles et géographiques.",
+        "desc2": "Un jeu éducatif, dynamique et captivant — parfait pour apprendre et s'amuser en même temps !"
+      },
+      "flappy": {
+        "title": "FLAPPY DUCK",
+        "desc1": "Un jeu inspiré du classique Flappy Bird, développé pour Android.",
+        "desc2": "Le joueur contrôle un canard qui doit traverser des obstacles, testant ses réflexes et sa coordination.",
+        "coming": "Bientôt disponible"
+      },
+      "tictactoe": {
+        "title": "TIC-TAC-TOE",
+        "play": "Jouer",
+        "desc": "Un jeu de plateau classique développé pour le navigateur. Il permet à deux joueurs de s'affronter sur un plateau 3x3, avec une logique de détection automatique des victoires, des égalités et de réinitialisation de la partie. L'accent a été mis sur la création d'une interface simple et intuitive, alliant une bonne expérience utilisateur à l'implémentation de la logique du jeu."
+      },
+      "timer": {
+        "title": "Minuteur",
+        "try": "Essayer",
+        "desc": "Ce projet est une application web interactive qui réunit trois outils essentiels du quotidien : chronomètre, horloge en temps réel et minuteur personnalisable."
+      }
+    },
+    "contact": {
+      "name_placeholder": "Nom",
+      "email_placeholder": "Email",
+      "message_placeholder": "Écrivez un message... je vous écoute",
+      "submit": "Envoyer",
+      "sent": "Email envoyé avec succès !",
+      "error": "Erreur lors de l'envoi de l'email"
+    }
+  }
+}
