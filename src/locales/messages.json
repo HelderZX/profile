@@ -75,6 +75,11 @@
         "title": "Timer",
         "try": "Experimentar",
         "desc": "Este projeto é uma aplicação web interativa que reúne três ferramentas essenciais do dia a dia: cronômetro, relógio em tempo real e temporizador personalizável."
+      },
+      "weather": {
+        "title": "Weather",
+        "open": "Ver Projeto",
+        "desc": "Uma aplicação web de meteorologia que permite consultar as condições climáticas atuais e previsões para qualquer cidade, com uma interface simples e intuitiva."
       }
     },
     "contact": {
@@ -162,6 +167,11 @@
         "title": "Timer",
         "try": "Try it",
         "desc": "This project is an interactive web app that brings together three essential daily tools: stopwatch, real-time clock and a customizable timer."
+      },
+      "weather": {
+        "title": "Weather",
+        "open": "View Project",
+        "desc": "A weather web app that allows you to check current weather conditions and forecasts for any city, with a simple and intuitive interface."
       }
     },
     "contact": {
@@ -249,6 +259,11 @@
         "title": "Minuteur",
         "try": "Essayer",
         "desc": "Ce projet est une application web interactive qui réunit trois outils essentiels du quotidien : chronomètre, horloge en temps réel et minuteur personnalisable."
+      },
+      "weather": {
+        "title": "Météo",
+        "open": "Voir le Projet",
+        "desc": "Une application web météo qui permet de consulter les conditions climatiques actuelles et les prévisions pour n'importe quelle ville, avec une interface simple et intuitive."
       }
     },
     "contact": {

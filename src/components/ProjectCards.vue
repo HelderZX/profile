@@ -78,6 +78,7 @@ import Galleria from 'primevue/galleria'
 import mapMindLogo from '@/images/map-mind/logo.svg'
 import ticTacToeLogo from '@/images/tic-tac-toe/logo.png'
 import timerLogo from '@/images/timer/logo.svg'
+import weatherLogo from '@/images/weather/logo.svg'
 
 import mmScreen1 from '@/images/map-mind/screen1.png'
 import mmScreen2 from '@/images/map-mind/screen2.png'
@@ -86,6 +87,7 @@ import ttScreen2 from '@/images/tic-tac-toe/screen2.png'
 import tmScreen1 from '@/images/timer/screen1.png'
 import tmScreen2 from '@/images/timer/screen2.png'
 import tmScreen3 from '@/images/timer/screen3.png'
+import wtScreen1 from '@/images/weather/screen1.png'
 
 const { t } = useI18n()
 const dialogVisible = ref(false)
@@ -121,6 +123,16 @@ const projects = computed(() => [
     githubUrl: 'https://github.com/HelderZX/clock',
     actionLabel: t('project.timer.try'),
     screens: [{ src: tmScreen1 }, { src: tmScreen2 }, { src: tmScreen3 }],
+  },
+  {
+    id: 'weather',
+    logo: weatherLogo,
+    title: t('project.weather.title'),
+    descriptions: [t('project.weather.desc')],
+    liveUrl: 'https://weather.helderzx.website/',
+    githubUrl: 'https://github.com/HelderZX/weather',
+    actionLabel: t('project.weather.open'),
+    screens: [{ src: wtScreen1 }],
   },
 ])
 
