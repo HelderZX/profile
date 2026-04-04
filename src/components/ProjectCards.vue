@@ -9,7 +9,8 @@
       <div class="projects-grid">
         <div v-for="project in projects" :key="project.id" class="project-card" @click="openProject(project)">
           <div class="project-logo-area">
-            <img :src="project.logo" :alt="project.id" class="project-logo" />
+            <Skeleton v-if="!logoLoaded[project.id]" width="50px" height="50px" borderRadius="8px" />
+            <img :src="project.logo" :alt="project.id" class="project-logo" :class="{ loaded: logoLoaded[project.id] }" @load="logoLoaded[project.id] = true" />
           </div>
           <div class="project-info">
             <h3 class="project-title">{{ project.title }}</h3>
@@ -70,10 +71,11 @@
 </template>
 
 <script setup>
-import { ref, computed } from 'vue'
+import { ref, reactive, computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 import Dialog from 'primevue/dialog'
 import Galleria from 'primevue/galleria'
+import Skeleton from 'primevue/skeleton'
 
 import mapMindLogo from '@/images/map-mind/logo.svg'
 import ticTacToeLogo from '@/images/tic-tac-toe/logo.png'
@@ -92,6 +94,7 @@ import wtScreen1 from '@/images/weather/screen1.png'
 const { t } = useI18n()
 const dialogVisible = ref(false)
 const selectedProject = ref(null)
+const logoLoaded = reactive({})
 
 const projects = computed(() => [
   {
@@ -203,6 +206,12 @@ function openProject(project) {
   width: 50px;
   height: 50px;
   object-fit: contain;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.project-logo.loaded {
+  opacity: 1;
 }
 
 .project-info {

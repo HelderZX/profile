@@ -67,7 +67,8 @@
 
         <div class="col-12 md:col-5 md:col-offset-1 flex justify-content-center">
           <div class="hero-photo-wrapper">
-            <img src="@/images/profile.png" alt="profile" class="hero-photo" />
+            <Skeleton v-if="!heroImageLoaded" shape="circle" width="100%" height="100%" class="hero-skeleton" />
+            <img src="@/images/profile.png" alt="profile" class="hero-photo" :class="{ loaded: heroImageLoaded }" @load="heroImageLoaded = true" />
           </div>
         </div>
       </div>
@@ -79,9 +80,11 @@
 import { ref, computed, onMounted, onUnmounted } from 'vue'
 import { useI18n } from 'vue-i18n'
 import Button from 'primevue/button'
+import Skeleton from 'primevue/skeleton'
 
 const { t, tm } = useI18n()
 const currentIndex = ref(0)
+const heroImageLoaded = ref(false)
 let interval = null
 
 const habilities = computed(() => tm('habilities'))
@@ -203,12 +206,24 @@ onUnmounted(() => clearInterval(interval))
   border-radius: 50%;
   overflow: hidden;
   border: 4px solid #222;
+  position: relative;
+}
+
+.hero-skeleton {
+  position: absolute;
+  inset: 0;
 }
 
 .hero-photo {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.hero-photo.loaded {
+  opacity: 1;
 }
 
 .hero-grid {

@@ -21,7 +21,7 @@
 <script setup>
 import { useI18n } from 'vue-i18n'
 
-import cssLogo from '@/images/logos/css.svg'
+import expressLogo from '@/images/logos/expressjs.svg'
 import jsLogo from '@/images/logos/javascript.svg'
 import laravelLogo from '@/images/logos/laravel.svg'
 import phpLogo from '@/images/logos/php.svg'
@@ -33,7 +33,7 @@ import tailwindLogo from '@/images/logos/tailwindcss.svg'
 const { t } = useI18n()
 
 const technologies = [
-  { name: 'CSS', logo: cssLogo },
+  { name: 'Express', logo: expressLogo },
   { name: 'JavaScript', logo: jsLogo },
   { name: 'PHP', logo: phpLogo },
   { name: 'Laravel', logo: laravelLogo },
