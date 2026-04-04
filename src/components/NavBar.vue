@@ -46,7 +46,7 @@ function changeLanguage() {
 
 function downloadResume() {
   const lang = locale.value === 'pt' ? 'PT' : 'EN'
-  window.open(`src/pdf/Resume - Helder Andrade - ${lang}.pdf`, '_blank')
+  window.open(`/Resume - Helder Andrade - ${lang}.pdf`, '_blank')
 }
 </script>
 
