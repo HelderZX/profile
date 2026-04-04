@@ -34,7 +34,7 @@
           <div class="timeline">
             <div v-for="(item, idx) in experienceEvents" :key="idx" class="timeline-item">
               <div class="timeline-dot"></div>
-              <div class="timeline-content">
+              <div :class="['timeline-content', { 'timeline-content--current': item.current }]">
                 <div class="timeline-period">{{ item.period }}</div>
                 <h3 class="timeline-title">{{ item.title }}</h3>
                 <p class="timeline-subtitle">{{ item.subtitle }}</p>
@@ -87,6 +87,7 @@ const experienceEvents = computed(() => [
     title: t('work.controlink.name'),
     period: `2023 → ${currentYear}`,
     subtitle: t('work.controlink.role'),
+    current: true,
     details: [
       { bold: '', text: t('work.controlink.desc') },
       { bold: t('work.controlink.technologies'), text: t('work.controlink.technologies_desc') },
@@ -198,6 +199,11 @@ const experienceEvents = computed(() => [
 
 .timeline-detail b {
   color: #ccc;
+}
+
+.timeline-content--current {
+  border-color: #f59e0b;
+  box-shadow: 0 0 12px rgba(245, 158, 11, 0.3);
 }
 
 @media (max-width: 768px) {
