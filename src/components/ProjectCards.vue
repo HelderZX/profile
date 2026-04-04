@@ -4,7 +4,7 @@
       <h2 class="section-title text-center">
         {{ t('sections.projects') }}
       </h2>
-      <p class="section-subtitle text-center mb-5">Alguns projetos pessoais que desenvolvi</p>
+      <p class="section-subtitle text-center mb-5">{{ t('project.subtitle') }}</p>
 
       <!-- Desktop/Tablet Grid -->
       <div class="projects-grid desktop-only">
