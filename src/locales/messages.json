@@ -80,6 +80,13 @@
         "title": "Weather",
         "open": "Ver Projeto",
         "desc": "Uma aplicação web de meteorologia que permite consultar as condições climáticas atuais e previsões para qualquer cidade, com uma interface simples e intuitiva."
+      },
+      "wrapped": {
+        "title": "WrappedZap",
+        "open": "Ver Projeto",
+        "desc1": "Gera uma retrospectiva geral do teu WhatsApp! Visualiza estatísticas e gráficos interativos sobre as tuas conversas de forma divertida.",
+        "desc2": "Os teus dados do WhatsApp são processados 100% localmente no navegador, garantindo total privacidade.",
+        "coming": "Em breve"
       }
     },
     "contact": {
@@ -172,6 +179,13 @@
         "title": "Weather",
         "open": "View Project",
         "desc": "A weather web app that allows you to check current weather conditions and forecasts for any city, with a simple and intuitive interface."
+      },
+      "wrapped": {
+        "title": "WrappedZap",
+        "open": "View Project",
+        "desc1": "Generate a complete WhatsApp retrospective! Visualize statistics and interactive charts about your conversations in a fun way.",
+        "desc2": "Your WhatsApp data is processed 100% locally in your browser, ensuring total privacy.",
+        "coming": "Coming soon"
       }
     },
     "contact": {
@@ -264,6 +278,13 @@
         "title": "Météo",
         "open": "Voir le Projet",
         "desc": "Une application web météo qui permet de consulter les conditions climatiques actuelles et les prévisions pour n'importe quelle ville, avec une interface simple et intuitive."
+      },
+      "wrapped": {
+        "title": "WrappedZap",
+        "open": "Voir le Projet",
+        "desc1": "Générez une rétrospective complète de votre WhatsApp ! Visualisez des statistiques et des graphiques interactifs sur vos conversations de manière ludique.",
+        "desc2": "Vos données WhatsApp sont traitées 100% localement dans votre navigateur, garantissant une confidentialité totale.",
+        "coming": "Bientôt disponible"
       }
     },
     "contact": {

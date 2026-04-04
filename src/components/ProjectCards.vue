@@ -6,7 +6,8 @@
       </h2>
       <p class="section-subtitle text-center mb-5">Alguns projetos pessoais que desenvolvi</p>
 
-      <div class="projects-grid">
+      <!-- Desktop/Tablet Grid -->
+      <div class="projects-grid desktop-only">
         <div v-for="project in projects" :key="project.id" class="project-card" @click="openProject(project)">
           <div class="project-logo-area">
             <Skeleton v-if="!logoLoaded[project.id]" width="50px" height="50px" borderRadius="8px" />
@@ -25,6 +26,31 @@
             </div>
           </div>
         </div>
+      </div>
+      <!-- Mobile Carousel -->
+      <div class="mobile-only">
+        <Carousel :value="projects" :numVisible="1" :numScroll="1" :circular="true" :autoplayInterval="5000" :showIndicators="true" :showNavigators="true">
+          <template #item="{ data: project }">
+            <div class="project-card" @click="openProject(project)">
+              <div class="project-logo-area">
+                <Skeleton v-if="!logoLoaded[project.id]" width="50px" height="50px" borderRadius="8px" />
+                <img :src="project.logo" :alt="project.id" class="project-logo" :class="{ loaded: logoLoaded[project.id] }" @load="logoLoaded[project.id] = true" />
+              </div>
+              <div class="project-info">
+                <h3 class="project-title">{{ project.title }}</h3>
+                <p class="project-desc">{{ project.descriptions[0] }}</p>
+                <div class="project-links">
+                  <span v-if="project.githubUrl" class="project-link">
+                    <i class="pi pi-github"></i> GitHub
+                  </span>
+                  <span v-if="project.liveUrl" class="project-link primary">
+                    <i class="pi pi-external-link"></i> {{ project.actionLabel }}
+                  </span>
+                </div>
+              </div>
+            </div>
+          </template>
+        </Carousel>
       </div>
     </div>
 
@@ -76,10 +102,12 @@ import { useI18n } from 'vue-i18n'
 import Dialog from 'primevue/dialog'
 import Galleria from 'primevue/galleria'
 import Skeleton from 'primevue/skeleton'
+import Carousel from 'primevue/carousel'
 
-import mapMindLogo from '@/images/map-mind/logo.svg'
+
+import mapMindLogo from '@/images/map-mind/logo3.svg'
 import ticTacToeLogo from '@/images/tic-tac-toe/logo.png'
-import timerLogo from '@/images/timer/logo.svg'
+import timerLogo from '@/images/timer/logo3.svg'
 import weatherLogo from '@/images/weather/logo.svg'
 
 import mmScreen1 from '@/images/map-mind/screen1.png'
@@ -91,12 +119,32 @@ import tmScreen2 from '@/images/timer/screen2.png'
 import tmScreen3 from '@/images/timer/screen3.png'
 import wtScreen1 from '@/images/weather/screen1.png'
 
+// WrappedZap (WhatsApp Wrapped)
+import wrappedLogo from '@/images/wrapped/logo.svg'
+import wrappedScreen1 from '@/images/wrapped/screen1.jpeg'
+import wrappedScreen2 from '@/images/wrapped/screen2.jpeg'
+import wrappedScreen3 from '@/images/wrapped/screen3.jpeg'
+
 const { t } = useI18n()
 const dialogVisible = ref(false)
 const selectedProject = ref(null)
 const logoLoaded = reactive({})
 
 const projects = computed(() => [
+  {
+    id: 'wrapped',
+    logo: wrappedLogo,
+    title: t('project.wrapped.title'),
+    descriptions: [t('project.wrapped.desc1'), t('project.wrapped.desc2')],
+    liveUrl: 'https://whatsapp-wrapped.helderzx.website/',
+    githubUrl: 'https://github.com/HelderZX/whatsapp-wrapped',
+    actionLabel: t('project.wrapped.open'),
+    screens: [
+      { src: wrappedScreen1 },
+      { src: wrappedScreen2 },
+      { src: wrappedScreen3 }
+    ],
+  },
   {
     id: 'map-mind',
     logo: mapMindLogo,
@@ -234,6 +282,7 @@ function openProject(project) {
   margin: 0 0 0.8rem 0;
   display: -webkit-box;
   -webkit-line-clamp: 2;
+  line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
@@ -265,6 +314,30 @@ function openProject(project) {
     justify-content: center;
   }
 }
+  .desktop-only {
+    display: block;
+  }
+  .desktop-only.projects-grid {
+    gap: 1.2rem;
+    display: flex;
+    flex-direction: column;
+  }
+  .mobile-only {
+    display: none;
+  }
+  @media (max-width: 576px) {
+    .desktop-only {
+      display: none !important;
+    }
+    .mobile-only {
+      display: block !important;
+      margin-bottom: 2rem;
+    }
+    .project-card {
+      max-width: 340px;
+      margin: 0 auto;
+    }
+  }
 </style>
 
 <style>
