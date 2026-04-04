@@ -41,7 +41,7 @@
           <div>
             <p class="hero-greeting m-0">{{ t('greeting.hello') }}</p>
             <h1 class="hero-name m-0">{{ t('greeting.name') }}</h1>
-            <p class="hero-role m-0 mt-2">{{ currentHability }}</p>
+            <p class="hero-role m-0 mt-2"><span class="hero-role-text">{{ displayedText }}</span><span class="hero-cursor">|</span></p>
           </div>
 
           <p class="hero-desc m-0 line-height-3">{{ t('intro.description') }}</p>
@@ -66,9 +66,17 @@
         </div>
 
         <div class="col-12 md:col-5 md:col-offset-1 flex justify-content-center">
-          <div class="hero-photo-wrapper">
-            <Skeleton v-if="!heroImageLoaded" shape="circle" width="100%" height="100%" class="hero-skeleton" />
-            <img src="@/images/profile.png" alt="profile" class="hero-photo" :class="{ loaded: heroImageLoaded }" @load="heroImageLoaded = true" />
+          <div class="hero-photo-container">
+            <!-- Decorative circle outlines -->
+            <div class="photo-ring ring-1"></div>
+            <svg class="photo-ring ring-2" viewBox="0 0 345 345">
+              <circle cx="172.5" cy="172.5" r="171.5" fill="none" stroke="rgba(239,131,84,0.12)" stroke-width="1" stroke-dasharray="14 10" />
+            </svg>
+
+            <div class="hero-photo-wrapper">
+              <Skeleton v-if="!heroImageLoaded" shape="circle" width="100%" height="100%" class="hero-skeleton" />
+              <img src="@/images/profile.png" alt="profile" class="hero-photo" :class="{ loaded: heroImageLoaded }" @load="heroImageLoaded = true" />
+            </div>
           </div>
         </div>
       </div>
@@ -85,18 +93,43 @@ import Skeleton from 'primevue/skeleton'
 const { t, tm } = useI18n()
 const currentIndex = ref(0)
 const heroImageLoaded = ref(false)
-let interval = null
+const displayedText = ref('')
+let timeout = null
 
 const habilities = computed(() => tm('habilities'))
-const currentHability = computed(() => habilities.value[currentIndex.value] || '')
+
+function typeWriter() {
+  const word = habilities.value[currentIndex.value] || ''
+  let charIndex = 0
+
+  function typeChar() {
+    if (charIndex <= word.length) {
+      displayedText.value = word.slice(0, charIndex)
+      charIndex++
+      timeout = setTimeout(typeChar, 90)
+    } else {
+      timeout = setTimeout(eraseChar, 2000)
+    }
+  }
+
+  function eraseChar() {
+    if (displayedText.value.length > 0) {
+      displayedText.value = displayedText.value.slice(0, -1)
+      timeout = setTimeout(eraseChar, 50)
+    } else {
+      currentIndex.value = (currentIndex.value + 1) % habilities.value.length
+      timeout = setTimeout(typeWriter, 400)
+    }
+  }
+
+  typeChar()
+}
 
 onMounted(() => {
-  interval = setInterval(() => {
-    currentIndex.value = (currentIndex.value + 1) % habilities.value.length
-  }, 3000)
+  typeWriter()
 })
 
-onUnmounted(() => clearInterval(interval))
+onUnmounted(() => clearTimeout(timeout))
 </script>
 
 <style scoped>
@@ -104,7 +137,7 @@ onUnmounted(() => clearInterval(interval))
   background: #111;
   padding: 0 2rem;
   position: relative;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 /* Decorative SVG shapes */
@@ -176,6 +209,22 @@ onUnmounted(() => clearInterval(interval))
   letter-spacing: 0.5px;
 }
 
+.hero-role-text {
+  border-right: 1px solid transparent;
+}
+
+.hero-cursor {
+  color: var(--p-primary-400);
+  font-weight: 300;
+  animation: blink 0.7s step-end infinite;
+  margin-left: 1px;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
 .hero-desc {
   font-size: 0.95rem;
   color: #aaa;
@@ -207,6 +256,38 @@ onUnmounted(() => clearInterval(interval))
   overflow: hidden;
   border: 4px solid #222;
   position: relative;
+  z-index: 1;
+}
+
+.hero-photo-container {
+  position: relative;
+  width: 340px;
+  height: 340px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: visible;
+}
+
+.photo-ring {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.ring-1 {
+  width: 310px;
+  height: 310px;
+  transform: translate(-50%, -50%);
+  border: 1px solid rgba(239, 131, 84, 0.35);
+}
+
+.ring-2 {
+  width: 345px;
+  height: 345px;
+  transform: translate(-50%, -50%);
 }
 
 .hero-skeleton {
@@ -247,6 +328,9 @@ onUnmounted(() => clearInterval(interval))
     max-width: 100%;
   }
   .hero-photo-wrapper {
+    display: none;
+  }
+  .hero-photo-container {
     display: none;
   }
 }
